@@ -1,0 +1,13 @@
+<?php $form->prepare();
+echo $this->form()->openTag($form); 
+$User = $form->get('User');
+echo $this->formRow($User->get('firstName'));
+echo $this->formRow($User->get('lastName')); 
+echo $this->formHidden($form->get('csrf')); 
+echo $this->formInput($form->get('submit'));
+
+echo $this->form()->closeTag($form);
+echo "
+Module: ContentCore
+Controller: index
+Action: formtest";
